@@ -1,0 +1,50 @@
+app:
+  name: "Intelligent HR Assistant"
+  version: "1.0.0"
+  environment: "development"
+
+llm:
+  default_provider: "openai"
+  model: "gpt-4-turbo-preview"
+  temperature: 0.7
+  max_tokens: 4000
+
+database:
+  type: "sqlite"
+  path: "data/hr_assistant.db"
+  echo: false
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: false
+  cors_origins: ["*"]
+
+streamlit:
+  host: "0.0.0.0"
+  port: 8501
+  theme: "light"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/app.log"
+
+email:
+  enabled: false
+  from_address: "noreply@hr-assistant.com"
+  reminder_frequency: "weekly"
+
+storage:
+  resumes: "data/raw_resumes"
+  processed: "data/processed_resumes"
+  job_descriptions: "data/job_descriptions"
+  models: "models"
+
+features:
+  agentic_system: true
+  resume_parsing: true
+  job_matching: true
+  application_tracking: true
+  reminders: true
+  analytics: true

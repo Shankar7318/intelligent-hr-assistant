@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hr-assistant
+  labels:
+    app: hr-assistant
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hr-assistant
+  template:
+    metadata:
+      labels:
+        app: hr-assistant
+    spec:
+      containers:
+      - name: hr-assistant
+        image: hr-assistant:latest
+        ports:
+        - containerPort: 8501
+        - containerPort: 8000
+        env:
+        - name: ENVIRONMENT
+          value: "production"
+        - name: DATABASE_URL
+          value: "sqlite:///data/hr_assistant.db"
+        volumeMounts:
+        - name: data-volume
+          mountPath: /app/data
+        - name: models-volume
+          mountPath: /app/models
+        - name: logs-volume
+          mountPath: /app/logs
+      volumes:
+      - name: data-volume
+        persistentVolumeClaim:
+          claimName: data-pvc
+      - name: models-volume
+        persistentVolumeClaim:
+          claimName: models-pvc
+      - name: logs-volume
+        persistentVolumeClaim:
+          claimName: logs-pvc

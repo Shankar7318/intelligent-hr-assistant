@@ -1,0 +1,17 @@
+[33mcommit 9a165bffa9f4bccd66fcf53aeaad4afe6076aac2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: shankar behera <shankar.blp2003@gmail.com>
+Date:   Thu Aug 21 19:39:45 2025 +0530
+
+    first commit
+
+[33mcommit 47cdbb53cf1d3261a5e11aeff0a5ec5bf4a3dc6a[m
+Author: shankar behera <shankar.blp2003@gmail.com>
+Date:   Thu Aug 21 19:28:12 2025 +0530
+
+    first commit
+
+[33mcommit bbbcd4387bde20e35d200e585d48c80e48e8c2cf[m
+Author: shankar behera <shankar.blp2003@gmail.com>
+Date:   Thu Aug 21 19:27:21 2025 +0530
+
+    Normalize line endings with .gitattributes
