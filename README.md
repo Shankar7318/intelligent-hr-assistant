@@ -25,7 +25,7 @@ A comprehensive AI-powered HR assistant that streamlines hiring processes with m
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Shankar7318/intelligent-hr-assistant.git
    cd intelligent-hr-assistant
 2. **Run setup script**
    ```bash
@@ -33,7 +33,7 @@ A comprehensive AI-powered HR assistant that streamlines hiring processes with m
    ./scripts/setup_environment.sh
 3. **Configure API keys**
    ```bash
-# Edit .env file with your actual API keys
+   #Edit .env file with your actual API keys
    nano .env
 4. **Activate virtual environment**
   ``` bash
